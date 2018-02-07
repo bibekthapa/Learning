@@ -48,10 +48,6 @@ def weight_update_wi(errorInHidden,input_withBias,weight_input):
 class HandwritingNN:
 
     def __init__(self,inputs):
-        """
-        inputs is the input from the 
-            
-        """
         self.inputs = inputs
         self.l = len(self.inputs)    
         self.li = len(self.inputs[0])
@@ -59,8 +55,8 @@ class HandwritingNN:
         self.hidden_neuron = 50
         self.bias = 1
         self.outputsize=10
-        self.wi = np.random.random((self.li,self.hidden_neuron))*0.01
-        self.wh = np.random.random((self.hidden_neuron+1,self.outputsize))*0.01
+        self.wi = np.random.random((self.li,self.hidden_neuron))*0.001
+        self.wh = np.random.random((self.hidden_neuron+1,self.outputsize))*0.001
        
 
     def test(self,inputs):
